@@ -11,10 +11,10 @@ public class Participante extends User implements Serializable {
     public Participante() {
     }
 
-    public Participante(String usuario, String password, ArrayList listaTorneos, ArrayList TorneosGanados) {
-        super(usuario, password);
-        this.listaTorneos = listaTorneos;
-        this.TorneosGanados = TorneosGanados;
+    public Participante(String usuario, String password, boolean tipoUser,ArrayList listaTorneos, ArrayList TorneosGanados) {
+        super(usuario, password, tipoUser);
+        this.listaTorneos=listaTorneos;
+        this.TorneosGanados=TorneosGanados;
     }
 
     public ArrayList<Torneo> getListaTorneos() {

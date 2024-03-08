@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Torneo {
 
     private String nombre, ganador;
-    private ArrayList<User> participantes;
+    private ArrayList<Participantes> participantes;
     private boolean SigueAbierto, TorneoFinalizado;
 
     public String getNombre() {
@@ -24,11 +24,11 @@ public class Torneo {
         this.ganador = ganador;
     }
 
-    public ArrayList<User> getParticipantes() {
+    public ArrayList<Participante> getParticipantes() {
         return participantes;
     }
 
-    public void setParticipantes(ArrayList<User> participantes) {
+    public void setParticipantes(ArrayList<Participante> participantes) {
         this.participantes = participantes;
     }
 

@@ -602,6 +602,7 @@ public class Principal extends javax.swing.JFrame {
         for (User u : usuarios) {
             if (u.getUsuario().equals(usuario)) {
                 usuarioEncontrado = true;
+                usuarioIniciado=u;
                 break;
             }
         }
@@ -609,16 +610,24 @@ public class Principal extends javax.swing.JFrame {
             String contraseña = text_Contralogin.getText();
             for (User u : usuarios) {
                 if (u.getPassword().equals(contraseña)) {
-                    JOptionPane.showMessageDialog(jd_Cuenta, "Hola freefayero");
                     contraCorrecta = true;
                     break;
-                } else if (!contraCorrecta) {
-                    JOptionPane.showMessageDialog(jd_Cuenta, "Contraseña Incorrecta");
+                }else{
+                    JOptionPane.showMessageDialog(dialogo_registrar, "Contraseña incorrecta");
                 }
             }
         }
         if (!usuarioEncontrado) {
-            JOptionPane.showMessageDialog(jd_Cuenta, "Usuario no encontrado. Cree uno si no tiene.");
+            JOptionPane.showMessageDialog(dialogo_registrar, "Usuario no encontrado. Cree uno si no tiene.");
+        }
+        if(contraCorrecta){
+            if(usuarioIniciado.isTipoUser()==true){
+                panel_Ingresar.setVisible(false);
+                dialogo_participanteprincipal.setVisible(true);
+            }else{
+                panel_Ingresar.setVisible(false);
+                dialogo_adminprincipal.setVisible(true);
+            }
         }
     }//GEN-LAST:event_boton_LoginMouseClicked
 
@@ -637,16 +646,19 @@ public class Principal extends javax.swing.JFrame {
     private void boton_crearusuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_crearusuarioMouseClicked
         String nombreNuevoUser = text_nombreregistrar.getText();
         String contraUsernuevo = text_contraregistrar.getText();
+        boolean tipousuario;
         String Rol = (String) combo_RolUser.getSelectedItem();
         if (Rol.equalsIgnoreCase("participante")) {
-            Participante nuevoParticipante = new Participante(nombreNuevoUser, contraUsernuevo, null, null);
+            tipousuario=true;
+            Participante nuevoParticipante = new Participante(nombreNuevoUser,contraUsernuevo, tipousuario,null,null);
             usuarios.add(nuevoParticipante);
             users.cargarArchivo();
             users.setUser(nuevoParticipante);
             users.escribirArchivo();
             JOptionPane.showMessageDialog(dialogo_registrar, "Cuenta Creada Correctamente!");
         } else if (Rol.equalsIgnoreCase("administrador")) {
-            Admin nuevoAdmin = new Admin(0, nombreNuevoUser, contraUsernuevo);
+            tipousuario=false;
+            Admin nuevoAdmin = new Admin(0, nombreNuevoUser, contraUsernuevo,tipousuario);
             usuarios.add(nuevoAdmin);
             users.cargarArchivo();
             users.setUser(nuevoAdmin);
@@ -758,5 +770,5 @@ public class Principal extends javax.swing.JFrame {
 ArrayList<User> usuarios = new ArrayList();
     administrar users = new administrar("./usuarios.xnxx");
     administrar torneos = new administrar("./torneos.xnxx");
-    String usuarioIniciado;
+    User usuarioIniciado;
 }

@@ -1,16 +1,21 @@
 package lab8p2adonysmercadal;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable{
 
     private String usuario, password;
+    private boolean tipoUser;
 
     public User() {
     }
 
-    public User(String usuario, String password) {
+    public User(String usuario, String password, boolean tipoUser) {
         this.usuario = usuario;
         this.password = password;
+        this.tipoUser = tipoUser;
     }
+
 
     public String getUsuario() {
         return usuario;
@@ -27,6 +32,15 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public boolean isTipoUser() {
+        return tipoUser;
+    }
+
+    public void setTipoUser(boolean tipoUser) {
+        this.tipoUser = tipoUser;
+    }
+    
 
     @Override
     public String toString() {

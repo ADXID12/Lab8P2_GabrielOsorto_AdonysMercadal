@@ -9,10 +9,11 @@ public class Admin extends User implements Serializable{
     public Admin() {
     }
 
-    public Admin(int TorneosCreados, String usuario, String password) {
-        super(usuario, password);
+    public Admin(int TorneosCreados, String usuario, String password, boolean tipoUser) {
+        super(usuario, password, tipoUser);
         this.TorneosCreados = TorneosCreados;
     }
+
 
     public int getTorneosCreados() {
         return TorneosCreados;
