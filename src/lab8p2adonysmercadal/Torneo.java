@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Torneo {
 
     private String nombre, ganador;
-    private ArrayList<Participantes> participantes;
+    private ArrayList<Participante> participantes;
     private boolean SigueAbierto, TorneoFinalizado;
 
     public String getNombre() {

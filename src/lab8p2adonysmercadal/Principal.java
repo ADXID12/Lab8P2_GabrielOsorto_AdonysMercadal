@@ -623,9 +623,11 @@ public class Principal extends javax.swing.JFrame {
         if(contraCorrecta){
             if(usuarioIniciado.isTipoUser()==true){
                 panel_Ingresar.setVisible(false);
+                dialogo_participanteprincipal.pack();
                 dialogo_participanteprincipal.setVisible(true);
             }else{
                 panel_Ingresar.setVisible(false);
+                dialogo_adminprincipal.pack();
                 dialogo_adminprincipal.setVisible(true);
             }
         }
