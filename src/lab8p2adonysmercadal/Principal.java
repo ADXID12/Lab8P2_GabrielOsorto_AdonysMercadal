@@ -22,6 +22,29 @@ public class Principal extends javax.swing.JFrame {
         text_contraregistrar = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         boton_crearusuario = new javax.swing.JButton();
+        dialogo_adminprincipal = new javax.swing.JDialog();
+        jPanel13 = new javax.swing.JPanel();
+        jPanel19 = new javax.swing.JPanel();
+        boton_CerrarTorneo = new javax.swing.JButton();
+        boton_MarcarGanador = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lista_TornoesAdmin = new javax.swing.JList<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        lista_PersonasTorneo = new javax.swing.JList<>();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        boton_CrearTorneoAdmin = new javax.swing.JButton();
+        dialogo_creartorneo = new javax.swing.JDialog();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        spinner_Rondas = new javax.swing.JSpinner();
+        jPanel21 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        dialogo_participanteprincipal = new javax.swing.JDialog();
+        jPanel22 = new javax.swing.JPanel();
+        jPanel23 = new javax.swing.JPanel();
         panel_Ingresar = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
         text_Nombrelogin = new javax.swing.JTextField();
@@ -123,6 +146,241 @@ public class Principal extends javax.swing.JFrame {
             .addComponent(jPanel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jPanel13.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel19.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
+        jPanel19.setLayout(jPanel19Layout);
+        jPanel19Layout.setHorizontalGroup(
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 102, Short.MAX_VALUE)
+        );
+        jPanel19Layout.setVerticalGroup(
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        boton_CerrarTorneo.setBackground(new java.awt.Color(255, 0, 0));
+        boton_CerrarTorneo.setText("Cerrar Torneo");
+
+        boton_MarcarGanador.setBackground(new java.awt.Color(255, 0, 0));
+        boton_MarcarGanador.setText("Marcar Ganador");
+
+        lista_TornoesAdmin.setBackground(new java.awt.Color(255, 255, 255));
+        lista_TornoesAdmin.setForeground(new java.awt.Color(0, 0, 0));
+        lista_TornoesAdmin.setModel(new DefaultListModel()
+        );
+        jScrollPane1.setViewportView(lista_TornoesAdmin);
+
+        lista_PersonasTorneo.setBackground(new java.awt.Color(255, 255, 255));
+        lista_PersonasTorneo.setForeground(new java.awt.Color(0, 0, 0));
+        lista_PersonasTorneo.setModel(new DefaultListModel());
+        jScrollPane2.setViewportView(lista_PersonasTorneo);
+
+        jLabel4.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel4.setText("Torneos");
+
+        jLabel5.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel5.setText("Personas dentro del Torneo");
+
+        boton_CrearTorneoAdmin.setBackground(new java.awt.Color(51, 51, 255));
+        boton_CrearTorneoAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        boton_CrearTorneoAdmin.setText("Crear Torneo");
+        boton_CrearTorneoAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boton_CrearTorneoAdminMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addGap(165, 165, 165)
+                                .addComponent(boton_CerrarTorneo))
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addGap(133, 133, 133)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addGap(179, 179, 179)
+                                .addComponent(boton_MarcarGanador))
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addGap(153, 153, 153)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(190, 190, 190)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(214, 214, 214)
+                        .addComponent(jLabel5))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(boton_CrearTorneoAdmin)))
+                .addContainerGap(194, Short.MAX_VALUE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(boton_CrearTorneoAdmin)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(boton_CerrarTorneo)
+                    .addComponent(boton_MarcarGanador))
+                .addGap(133, 133, 133))
+        );
+
+        javax.swing.GroupLayout dialogo_adminprincipalLayout = new javax.swing.GroupLayout(dialogo_adminprincipal.getContentPane());
+        dialogo_adminprincipal.getContentPane().setLayout(dialogo_adminprincipalLayout);
+        dialogo_adminprincipalLayout.setHorizontalGroup(
+            dialogo_adminprincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        dialogo_adminprincipalLayout.setVerticalGroup(
+            dialogo_adminprincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel20.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Nombre del Torneo");
+
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Rondas");
+
+        spinner_Rondas.setModel(new javax.swing.SpinnerNumberModel());
+
+        jPanel21.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
+        jPanel21.setLayout(jPanel21Layout);
+        jPanel21Layout.setHorizontalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 72, Short.MAX_VALUE)
+        );
+        jPanel21Layout.setVerticalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 204));
+        jButton1.setText("Crear Torneo");
+
+        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
+        jPanel20.setLayout(jPanel20Layout);
+        jPanel20Layout.setHorizontalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(spinner_Rondas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel20Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 277, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(75, 75, 75))))
+        );
+        jPanel20Layout.setVerticalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(spinner_Rondas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64))
+            .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout dialogo_creartorneoLayout = new javax.swing.GroupLayout(dialogo_creartorneo.getContentPane());
+        dialogo_creartorneo.getContentPane().setLayout(dialogo_creartorneoLayout);
+        dialogo_creartorneoLayout.setHorizontalGroup(
+            dialogo_creartorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        dialogo_creartorneoLayout.setVerticalGroup(
+            dialogo_creartorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dialogo_creartorneoLayout.createSequentialGroup()
+                .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel22.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel23.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
+        jPanel23.setLayout(jPanel23Layout);
+        jPanel23Layout.setHorizontalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 127, Short.MAX_VALUE)
+        );
+        jPanel23Layout.setVerticalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 585, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
+        jPanel22.setLayout(jPanel22Layout);
+        jPanel22Layout.setHorizontalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel22Layout.createSequentialGroup()
+                .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 872, Short.MAX_VALUE))
+        );
+        jPanel22Layout.setVerticalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout dialogo_participanteprincipalLayout = new javax.swing.GroupLayout(dialogo_participanteprincipal.getContentPane());
+        dialogo_participanteprincipal.getContentPane().setLayout(dialogo_participanteprincipalLayout);
+        dialogo_participanteprincipalLayout.setHorizontalGroup(
+            dialogo_participanteprincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogo_participanteprincipalLayout.createSequentialGroup()
+                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        dialogo_participanteprincipalLayout.setVerticalGroup(
+            dialogo_participanteprincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dialogo_participanteprincipalLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         panel_Ingresar.setBackground(new java.awt.Color(255, 255, 255));
@@ -155,9 +413,9 @@ public class Principal extends javax.swing.JFrame {
         boton_Registrar.setBackground(new java.awt.Color(51, 51, 255));
         boton_Registrar.setForeground(new java.awt.Color(0, 0, 0));
         boton_Registrar.setText("Registrar");
-        boton_Registrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton_RegistrarActionPerformed(evt);
+        boton_Registrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boton_RegistrarMouseClicked(evt);
             }
         });
 
@@ -242,15 +500,25 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void boton_RegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_RegistrarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton_RegistrarActionPerformed
-
     private void boton_LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_LoginMouseClicked
-        if(usuarios.isEmpty()){
+        if (usuarios.isEmpty()) {
             JOptionPane.showMessageDialog(panel_Ingresar, "cuenta inexiste, si no tiene una creela");
+        } else {
+
         }
     }//GEN-LAST:event_boton_LoginMouseClicked
+
+    private void boton_RegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_RegistrarMouseClicked
+        panel_Ingresar.setVisible(false);
+        dialogo_registrar.setVisible(true);
+    }//GEN-LAST:event_boton_RegistrarMouseClicked
+
+    private void boton_CrearTorneoAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_CrearTorneoAdminMouseClicked
+        dialogo_creartorneo.pack();
+        dialogo_creartorneo.setResizable(false);
+        dialogo_creartorneo.setVisible(true);
+
+    }//GEN-LAST:event_boton_CrearTorneoAdminMouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -283,24 +551,41 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton boton_CerrarTorneo;
+    private javax.swing.JButton boton_CrearTorneoAdmin;
     private javax.swing.JButton boton_Login;
+    private javax.swing.JButton boton_MarcarGanador;
     private javax.swing.JButton boton_Registrar;
     private javax.swing.JButton boton_crearusuario;
+    private javax.swing.JDialog dialogo_adminprincipal;
+    private javax.swing.JDialog dialogo_creartorneo;
+    private javax.swing.JDialog dialogo_participanteprincipal;
     private javax.swing.JDialog dialogo_registrar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -308,12 +593,18 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel label234;
+    private javax.swing.JList<String> lista_PersonasTorneo;
+    private javax.swing.JList<String> lista_TornoesAdmin;
     private javax.swing.JPanel panel_Ingresar;
+    private javax.swing.JSpinner spinner_Rondas;
     private javax.swing.JPasswordField text_Contralogin;
     private javax.swing.JTextField text_Nombrelogin;
     private javax.swing.JTextField text_contraregistrar;
     private javax.swing.JTextField text_nombreregistrar;
     // End of variables declaration//GEN-END:variables
-ArrayList<User> usuarios;
+ArrayList<User> usuarios = new ArrayList();
 }
