@@ -1,6 +1,8 @@
 package lab8p2adonysmercadal;
 
-public class Admin extends User {
+import java.io.Serializable;
+
+public class Admin extends User implements Serializable{
 
     private int TorneosCreados;
 

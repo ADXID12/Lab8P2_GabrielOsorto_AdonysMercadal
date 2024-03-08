@@ -1,8 +1,9 @@
 package lab8p2adonysmercadal;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Participante extends User {
+public class Participante extends User implements Serializable {
 
     private ArrayList<Torneo> listaTorneos = new ArrayList();
     private ArrayList<Torneo> TorneosGanados = new ArrayList();
