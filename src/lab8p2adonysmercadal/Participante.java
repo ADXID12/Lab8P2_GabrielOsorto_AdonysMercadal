@@ -7,6 +7,15 @@ public class Participante extends User {
     private ArrayList<Torneo> listaTorneos = new ArrayList();
     private ArrayList<Torneo> TorneosGanados = new ArrayList();
 
+    public Participante() {
+    }
+
+    public Participante(String usuario, String password, ArrayList listaTorneos, ArrayList TorneosGanados) {
+        super(usuario, password);
+        this.listaTorneos = listaTorneos;
+        this.TorneosGanados = TorneosGanados;
+    }
+
     public ArrayList<Torneo> getListaTorneos() {
         return listaTorneos;
     }
